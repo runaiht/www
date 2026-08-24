@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to aniruth.cc</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="robots" content="noindex">
+    <!-- Redirects to homepage after 3 seconds -->
+    <meta http-equiv="refresh" content="3; url=/">
+    <title>Page Not Found</title>
 </head>
 <body>
+    <h1>Oops! Page Not Found.</h1>
+    <p>The URL you requested does not exist. Redirecting you to the home page in 3 seconds...</p>
+    <p>If you are not redirected, <a href="/">click here</a>.</p>
 
-    <canvas id="matrix-canvas"></canvas>
-
-    <div id="word-container">Loading...</div>
-
- 
-
- <script src="script.js" defer></script>
+    <!-- JavaScript fallback if meta refresh fails -->
+    <script>
+        setTimeout(function() {
+            window.location.href = "/";
+        }, 3000);
+    </script>
 </body>
 </html>
